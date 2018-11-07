@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Google</title><style><!--
+body,td,a,p,.h{font-family:arial,sans-serif}
+.h{font-size:20px}
+.q{color:#00c}
+--></style>
+<script language=Javascript>
+function focusInputbox() {
+	document.forms.chatform.user_input.focus()
+}
+var string= "Hi! I am Google, would you like to chat with me? "
+var sentence= new Array();
+for (i=0; i<string.length; i++){
+	sentence[i]= string.substring(0,i+1)
+}
+var counter=0
+function printValue(output, array){
+	if (counter<string.length){
+		output.value = ""+ array[counter]
+		counter++
+	} else {
+		output.value = string
+		document.forms.chatform.yes.value="Yes, please"
+		document.forms.chatform.no.value="No, thanks"
+	}
+	return output.value	
+}
+</script>
+</head>
+
+<body bgcolor=#ffffff text=#000000 link=#0000cc vlink=#551a8b onLoad=focusInputbox() alink=#ff0000 topmargin=3 marginheight=3>
+<center>
+<img src="images/logo.gif" width=276 height=110 alt="Google"><br>
+<br>
+<table border=0 cellspacing=0 cellpadding=4><tr><td nowrap><font size=-1><b>Web</b>&nbsp;&nbsp;&nbsp;&nbsp;
+<a class=q href=# onMouseOver="window.status='';return true">Images</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a class=q href=# onMouseOver="window.status='';return true">Video</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a class=q href=# onMouseOver="window.status='';return true">News</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a class=q href=# onMouseOver="window.status='';return true">Maps</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<b><a href=# class=q onMouseOver="window.status='';return true">more&nbsp;&raquo;</a></b>
+</font></td></tr></table>
+
+<table cellpadding=0 cellspacing=0><tr valign=top><td width=25%>&nbsp;</td><td align=center nowrap>
+<form method=post name="chatform" autocomplete="off">
+<input maxlength=2048 name="user_input" size=55 value="" onKeyPress="printValue(this, sentence)"><br>
+<!--onClick="window.location.href='start.html'"-->
+<input type="button" name="yes" value="Google Search" style="width:110px;"><input type="button" name= "no" value="I'm Feeling Lucky" style="width:120px;" onClick="window.location.href='http://www.google.com'">
+</form>
+</td>
+
+<td nowrap width=25%><font size=-2>&nbsp;&nbsp;<a href=# onMouseOver="window.status='';return true">Advanced Search</a><br>&nbsp;&nbsp;<a href=# onMouseOver="window.status='';return true">Preferences</a><br>&nbsp;&nbsp;<a href=# onMouseOver="window.status='';return true">Language Tools</a></font></td>
+</tr></table>
+
+<br><br>
+<font size=-1><a href=# onMouseOver="window.status='';return true">Advertising&nbsp;Programs</a> - <a href=# onMouseOver="window.status='';return true">Business Solutions</a> - <a href=# onMouseOver="window.status='';return true">About Google</a> - <b><a href=# onMouseOver="window.status='';return true">Something strange here?</a></b></font>
+<p><font size=-2>&copy;2006 Google - All rights and wrongs reversed</font></p></center>
+
+</body>
+</html>

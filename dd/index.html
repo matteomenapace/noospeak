@@ -1,0 +1,450 @@
+<html>
+<head>
+
+<title>NooSpeak development diary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="NooSpeak is an innovative approach to Web search. You can chat with to your favourite search engine, instead of squeezing your brain to find the right set of keywords.">
+<link rel="icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+	<div id="logo">
+		<img 	height="39" 
+				width="203" 					
+				border="0" 
+				src="images/logo_medium_01.gif" 
+				alt="NooSpeak Home"> <span class="black">d</span><span class="light">evelopment</span> <span class="black">d</span><span class="light">iary</span>
+	</div>
+	
+	<div class="entry">
+		<div class="title">*disclaimer</div>
+		<div class="content">First of all, this is a diary and not a weblog: you will find the earliest entries on top, and the most recent information at the bottom of this page. <br>This diary documents the development of the project now labeled "NooSpeak", from the early stages of its concept till the latest implementation. <br>You will find material that can be considered illegal (for example, visual manipulations of trademarks and logos) as well as information about producing such illegal content. It is not my intention to foster these practices, but as they have been part of the design process, they are important to understand the whole project. <br>Furthermore, the content of this documentation and the content of <a href="http:/www.noospeak.com/" target="_blank">NooSpeak</a> have not been authored by Google, nor they represent the views or opinions of Google or Google personnel. NooSpeak is not affiliated or sponsored by Google, it only uses the publicly available service known as <a href="http:/www.google.com/" target="_blank">Google Search</a>.</div>
+	</div>
+	
+	<div class="entry">
+		<div class="title">What is NooSpeak?</div>
+		<div class="content"><span class="black"><a href="http:/www.noospeak.com/" target="_blank">NooSpeak</a> is a natural language search engine</span>: it allows people to express their needs in a language they are familiar with, and it presents search results in the form of a dialogue (or chat, if you prefer). It uses weak artificial intelligence and clustered human information to help people refine their searches. It also aims to make web search an entertaining discovery process.</div>
+	</div>
+	
+	<div class="entry" id="index">
+		<div class="title">Index</div>
+		<div class="content">
+			<ul>
+				<li><a href="#e10">Once upon a time...</a></li>
+				<li><a href="#e20">Black Google</a></li>
+				<li><a href="#e30">Dark Google</a></li>
+				<li><a href="#e40">Google Hacks</a></li>
+				<li><a href="#e50">A chat with Google, about Google</a></li>
+				<li><a href="#e60">Keywords, keywords, keywords..</a></li>
+				<li><a href="#e70">The Yes Men</a></li>
+				<li><a href="#e80">How to rip off Google's logotype</a></li>
+				<li><a href="#e90">Interface</a></li>
+				<li><a href="#e100">The entry point</a></li>
+				<li><a href="#e110">User testing pt.1</a></li>
+				<li><a href="#e120">InterFace</a></li>
+				<li><a href="#e130">Form Art</a></li>
+                <li><a href="#e140">Eliza and the Eliza Effect</a></li>
+                <li><a href="#e150">Alice</a></li>
+                <li><a href="#e160">ChatClouds</a></li>
+                <li><a href="#e170">The mRank</a></li>
+                <li><a href="#e180">User testing pt.2</a></li>
+                <li><a href="#e190">GoogleSpeaks</a></li>
+                <li><a href="#e200">GoogleSpeaks video</a></li>
+                <li><a href="#e210">New interface</a></li>
+                <li><a href="#e215">Filtering options</a></li>
+                <li><a href="#e220">Human-like Interaction</a></li>
+                <li><a href="#e230">Why NooSpeak?</a></li>
+                <li><a href="#e240">Authorized Public Interface</a></li>
+                <li><a href="#e250">Hyperlinks</a></li>
+                <li><a href="#e260">TakeAway Festival</a></li>
+                <li><a href="#e270">Frameworks for the future</a></li>
+                <li><a href="#e280">Creative Commons</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="entry" id="e10" style="margin-top:30px;">
+		<div class="date">25 July 2006</div>
+		<div class="title">Once upon a time..</div>
+		<div class="content">
+			It all started from "I barbari", by Alessandro Baricco. This book was published, split in chapters, in 2006 within the italian newspaper <a href="http://www.repubblica.it/" target="_blank">La Repubblica</a>. <br>I stumbled upon one them when I came back from holidays in July 2006. It was about Google, obviously.
+If you understand Italian, read the full chapter <a href="http://www.repubblica.it/2006/05/rubriche/i-barbari/capitolo-15/capitolo-15.html" target="_blank">here</a>. <br>One fact caught my attention: according to the author, back in 1996 <a href="http://en.wikipedia.org/wiki/Inktomi" target="_blank">Inktomi</a> (a very popular search engine at the time) could not find itself. Typing "inktomi" would not produce any result. "But can Google find itself?" I asked myself. Of course typing "google" into Google Search box returns thousands of <a href="http://www.google.com/search?q=google" target="_blank">results</a>, but my question was different: considering self-awareness as the borderline between artificial intelligence and "real life", the question becomes "Is Google self aware? Is Google intelligent?". The answer is "No", which leads to the next question: "What if Google were really intelligent, i.e. self aware?"
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+	
+	<div class="entry" id="e20">
+		<div class="date">28 August 2006</div>
+		<div class="title">Black Google</div>
+		<div class="content">
+			The idea of an intelligent Google was buzzing around in my head, and the following is the transcript of a brief note written on waste paper, the first <acronym title="the cry of an infant in the uterus">vagitus</acronym> of this project: <br>"Google that searches itself. Google is a tireless worker and it prides itself about that. But who is Google? A man or a woman? And if Google felt lonely, would it seek a woman or man? What type of man/woman? <br>Create a mock-up of Google in black, as Google is like a black hole of the Web, from which millions of people pass every day."
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+	
+	<div class="entry" id="e30">
+		<div class="date">12 Septempber 2006</div>
+		<div class="title">Dark Google</div>
+		<div class="content">
+			New notes amended the first idea: <br>"There is a risk of personalizing Google, assigning it human characteristics which it does not have, nor it needs. Better would be to engage people with an entertaining search experience, that would also evidence dark sides of Google. It is important to show the collective intelligence that forms the basis of Google's success: as stated by Google's <a href="http://www.google.com/corporate/tenthings.html" target="_blank">philosophy page</a> "<i>Google works because it relies on the millions of individuals posting websites to determine which other sites offer content of value</i>". <br>A link is like a vote, with Google in the role of organizing the global rating process".
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+	
+	<div class="entry" id="e40">
+		<div class="date">23 September 2006</div>
+		<div class="title">Google Hacks</div>
+		<div class="content">
+			I began to research for projects that used Google services in peculiar ways, which I learned are called "Google Hacks". There is even a <a href="http://www.oreilly.com/catalog/googlehks/" target="_blank">book</a>, published by O'Reilly, on this strand of experiments. The one which most interested me was "Google Talk" (not a really original name) by dutch programmer Douwe Osinga. Despite working for Google, he claims on his <a href="http://douweosinga.com/projects/googlehacks" target="_blank">personal website</a>: "<i>Without doubt, Google is the most useful website on the Internet. This is scary, considering that Google is a company and that power corrupts and absolute power corrupts absolutely</i>". <br>However, <a href="http://douweosinga.com/projects/googletalk" target="_blank">Google Talk</a> "<i>searches for an input sentence at Google, finds the next word and prints it. Then it will remove the first word of the search string, add the found word and repeat the process. The result seems to be meaningful sometimes. Other times it is giblish. But always fun</i>". <br><a href="http://www.runme.org/feature/read/+googletalk/+98/" target="_blank">More</a> about Google Talk. <br>After asking Douwe "open-source" Osinga the code for Google Talk and obtaining no response, I made <a href="http://www.noospeak.com/noospeak/googletalk/index.php" target="_blank">my own Google Talk</a>.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+	
+	<div class="entry" id="e50">
+		<div class="date">03 October 2006</div>
+		<div class="title">A chat with Google, about Google</div>
+		<div class="content">
+			During the first crits after the summer break I showed my <a href="http://www.noospeak.com/noospeak/googletalk/index.php" target="_blank">first experiments</a> (avoiding to mention that they were at the time just an attempt to copy <a href="http://douweosinga.com/projects/googletalk" target="_blank">Google Talk</a>) and presented a draft of concept for the project. View the <a href="e50/projectProposal.pdf" target="_blank">pdf</a> of that presentation. <br>Starting from a brief analysis of the evolution of the Web (from static, to dynamic, to the future scenario of a <a href="http://www.w3.org/2001/sw/" target="_blank">Semantic Web</a>), I extracted some key issues that my project would address and formulated a project "mission": <span class="black">an online application where one can chat with Google, about Google</span>. The last bit ("about Google") was trashed later, but at the time Google self-referentialism was still important for me and I expected my application to engage users in a dialogue with a fictional entity representing Google's corporate identity. Notice though the first appearance of the word "chat".
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+	
+	<div class="entry" id="e60">
+		<div class="date">12 October 2006</div>
+		<div class="title">Keywords, keywords, keywords..</div>
+		<div class="content">
+			More notes witnessing my (humble) understanding/interpretation of several concepts before I started researching them:
+<br><span class="black">Relational aesthetics</span>: the attention is given to communication rather than to representation. A leading role is taken by the form (medium), rather than by the content. It could be human-human or human-machine, where aesthetics are the rules/conventions/practices used to shape the medium, regardless of the meaning conveyed by the content/message.
+<br><span class="black">The medium is the message</span>: each medium is an active metaphor that influences the communication of a message. Medium does not only apply to the expression plan, but also to the content plan of a "text". A communication mediated by the Internet is therefore influenced by remoteness, anonymity, lack of body language. Written text is (still) the main form, the Internet is the medium.
+<br><span class="black">Corporate identity</span>: it is made by the values (ethics, mission) of a corporation. All visual extensions of a corporation are declined following such values. Ideally, every aspect of a corporate communication and every product/service it provides should embody the values of its identity. Visually, all artifacts should be consistent and identifiable with it. In short, a CI is the idea/blueprint of a corporation.
+<br><span class="black">Self-referentialism</span>: it happens whenever a person or a communicating system (anything could be a system, but here I mean something that is deliberately expressing a message, rather than just witnessing or suggesting it) refers to herself: speaks about herself as a whole or about a part of herself, or uses herself as a reference mark.
+<br><span class="black">Semantic Web</span>: a phase of the WWW, or perhaps a series of programming practices and production conventions that aim to develop a standardized language understandable by computers. Data is intelligible by machines as the relations between data are made meaningful.
+The Web can be considered a huge database, an enormous quickly-expanding unordered collection of documents. Semantic Web means to create meaningful and standard relations between the data contained into the documents, to have data describing other data or data describing the relations between different bodies of data, in order for computer to infer logical properties about information (for better search results, automated tasks, etc.).
+<br><span class="black">Natural language software</span>: human languages are very complex and inconspicuous  set of rules that determine our interpersonal communication. Software instead are coded in very strict languages that do not allow for incongruence. Natural language software converts information from computer databases into normal-sounding human language, and samples of human language into more formal representations that are easier for computer programs to manipulate.
+<br><span class="black">Predicate logic</span>: it is a branch of logic based on natural language, and its main components are subject, verb and object. Subject and object are entities, carriers of properties, while verb establishes relations between them and allows for logical inferences to be made on the two entities.
+<br><span class="black">Collaborative work</span>: a work which is not the effort of a single person, but the result of several people collaboration. This implies a certain level of interaction between people involved, so that the process of generating the work is as valuable as the end result. Collaboration requires compromise and negotiation but it can lead to unexpectedly creative and innovative results.
+<br><span class="black">Economy of attention</span>: related to the Web, where traffic and hype are the parameters for judging the value/price of an information. The more a website is visited, the more is valuable: therefore, a lot of efforts are put into driving users' attention, with search engines in a leading position.
+<br><span class="black">Reverse engineering metaphors</span>: metaphors are cognitive tools to make sense of reality. We use metaphors to assign functions, meaning and properties to entities that otherwise result difficult to understand. Reverse engineering means, to me, to challenge the familiarity of such metaphors, applying them to unfamiliar objects/events (meta-metaphors?) or bringing them back to their original meaning.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+	
+	<div class="entry" id="e70">
+		<div class="date">14 October 2006</div>
+		<div class="title">The Yes Men</div>
+		<div class="content">
+			I began to be interested in the work of media activists <a href="http://www.theyesmen.org/" target="_blank">The Yes Men</a>, who have made it their mission to provide "Identity Correction" to various corporate entities. To the Yes Men, "Identity Correction" means to impersonate members of a corporation and to use satire and parody. The aim is to present the truth and the ugliness behind the public facades which hide "<i>leaders and corporations who put profits ahead of everything else</i>". <br>Their recurrent technique is to set up websites with very similar urls and layouts to those of their targeted organizations/corporations/individuals. They are then invited by mistake to various lectures and conferences, where they give the most outrageous and surreal presentations in an effort to raise political consciousness. <br>My idea was to parody Google, so I started designing interfaces that resembled bigG in different ways.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+	
+	<div class="entry" id="e80">
+		<div class="date">19 October 2006</div>
+		<div class="title">How to rip off Google's logotype</div>
+		<div class="content">
+			The strongest sign of identity for Google's services is a colorful logotype with a basic lettering that is associated with different services' specifications (Google Mail, Google Labs, Google Calendar etc). Removing the logotype would often leave a Google's page <a href="e80/noLogo.html" target="_blank">unidentifiable</a>. Besides this soft corporate identity, Google is also known for the playfulness applied to the manifestations of its logotype, with a vast collection of <a href="http://www.google.com/holidaylogos.html" target="_blank">commemorative logotypes</a>.
+<a href="http://www.tutorialfx.com/view_tutorial.php?id=70" target="_blank">This tutorial</a> explains how to replicate Google's logotype, which font is <a href="http://www.myfonts.com/fonts/berthold/catull-bq/" target="_blank">Catull BQ</a>.
+I experimented on <a href="e80/images.html" target="_blank">visual "identity corrections"</a> and words-play to produce <a href="e80/flash.html" target="_blank">this animation</a>. Click on the pulsating "TM" to trigger the morphing.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e90">
+		<div class="date">30 October 2006</div>
+		<div class="title">Interface</div>
+		<div class="content">
+			The interface design started from analyzing three popular instant messaging clients: <a href="http://get.live.com/messenger/" target="_blank">Windows Live Messenger</a>, <a href="http://www.google.com/talk/" target="_blank">Google Talk</a> and <a href="http://www.skype.com/" target="_blank">Skype</a>. See <a href="e90/images.html" target="_blank">comparative screenshots</a>. 
+<br><br>A chatting interface is a single window tiled in two main panes:
+<br>1) <span class="black">input box</span>, positioned at the bottom, contains:
+<br><p class="indent">1.1) a blank field where user types her message (the necessary), 
+<br><p class="indent">1.2) a system status box (delivering information about the activity on the other end of the communication, e.g: "Matteo is writing..") 
+<br><p class="indent">1.3) sometimes a "submit" button (which can be avoided by using the "return/enter" key)
+<br><p class="indent">1.4) decorative functionalities, usually placed over the input field (font customization, images list, etc).
+<br>2) <span class="black">conversation log</span>, positioned at the top and filling the space down to the bottom with a chronological list of entries, which are added at the bottom of the conversation list. Each entry displays: 
+<br><p class="indent">2.1) author's name (nickname). In case of multiple entries some clients place "..." between each entry, 
+<br><p class="indent">2.2) a typed message (text-based, but it can contain tiny emotional images, so-called <a href=" http://en.wikipedia.org/wiki/Emoticon" target="_blank">emoticons</a>, or animations)
+<br><p class="indent">2.3) additional information regarding the time when an entry was created. 
+<br><br>The focal point of user interaction is the bottom of the interface window, where the input box is placed and the most recent entries are displayed. This is the opposite of a search engine interface, where the input box and the most relevant results are placed at the top of the page, leaving room for scrolling the rest of the list with content navigation at the bottom.
+<br>My <a href="e90/interfaceLayout.html" target="_blank">first designs</a> applied the bottom focal point to a Google's typical results page.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+   
+    <div class="entry" id="e100">
+		<div class="date">04 November 2006</div>
+		<div class="title">The entry point</div>
+		<div class="content">
+			The start page of the application should clearly present one entry point, make it task-oriented and enrich it with few options. <br>Google's home page is simply self-explanatory, as Jenifer Tidwell states in "<a href="http://designinginterfaces.com/" target="_blank">Designing Interfaces</a>": "<i>its home page design focuses users' attention on that one thing: you can't miss the search box! The other stuff is ranked into secondary and tertiary tiers, plus utility navigation</i>". <br>I thought <a href="http://www.noospeak.com/noospeak/chatwithme/" target="_blank">my homepage</a> would resemble quite exactly that of Google, to introduce users with a familiar context and encourage them to perform a familiar action, yet delivering a surprising experience once they start typing anything in the search box: the apparent search box was transformed into a yes/no gateway to the main application. 
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+	
+	<div class="entry" id="e110">
+		<div class="date">06 November 2006</div>
+		<div class="title">User testing pt.1</div>
+		<div class="content">
+			Testing the <a href="http://www.noospeak.com/noospeak/chatwithme/" target="_blank">unexpected Google homepage</a> approach gave interesting results: anyone recognized a familiar website, but few would actually notice the small differences. Moreover, discovering that it was actually impossible to type anything in the search box lead most users to a sense of frustration (rather than curiosity, as I expected) that discouraged them from continuing the experience. In fact, just one out of nine "typed" the whole Google's invitation to chat and clicked "Yes", while all others stopped after a few keystrokes and started clicking around. <br>A softer, more open approach was needed, as well as a visual layout that would clearly draw the difference between Google Search and my application.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e120">
+		<div class="date">11 November 2006</div>
+		<div class="title">InterFace</div>
+		<div class="content">
+			Being my aim to exploit functional and familiar interface elements to produce an unconventional/unexpected user experience, I began to be interested in <a href="http://www.c3.hu/collection/form/" target="_blank">Form Art</a>, a branch of net.art started by <a href="http://www.easylife.org/" target="_blank">Alexei Shulgin</a> and others in 1997. I started thinking the interface as an inter-face, where formal elements represented human features: an input box becomes a mouth, a radio button becomes an eye, and so on. <br>My inspiration for Google's face was the <a href="http://en.wikipedia.org/wiki/La_Bocca_della_Verit%C3%A0" target="_blank">Mouth of Truth</a> sculpture in Rome: it is thought to be part of an ancient Roman fountain, or perhaps a manhole cover, portraying one of several possible pagan gods. The most famous characteristic of the Mouth, however, is its role as a lie detector. Starting from the Middle Ages, it was believed that if one told a lie with his hand in the mouth of the sculpture, it would be bitten off. <br>Google can be considered a contemporary lie detector, an oracle and, as Clive Thompson wrote on <a href="http://www.wired.com/wired/archive/15.04/wired40_ceo.html" target="_blank">Wired Magazine</a>, a "<i>reputation-management system</i>". <br>The new <a href="e120/image.html" target="_blank">inter-face</a> was pretty successful in the first user-testing session: nobody out of seven connected it to the "Mouth of Truth", but everybody saw the human face and that discovery was rewarding and motivational for continuing the experience.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e130">
+		<div class="date">14 November 2006</div>
+		<div class="title">Form Art</div>
+		<div class="content">
+			Forms are not just buttons and boxes, they are also interactive voids, empty spaces that ask users to feed data in. <br>I started experimenting with Web forms as <span class="black">tools for restricted creation</span>. For <a href="e130/projectDescriptionForm.html" target="_blank">this demo</a> I wrote a short project description, leaving room for user' s interpretation and contribution. Clicking the "understand?" button does not produce any effect (though I could log users' interpretations and create statistics, graphics and so on) but the explicit invitation to interact with what would otherwise be a boring text proved to be engaging for people I showed the form.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e140">
+		<div class="date">21 November 2006</div>
+		<div class="title">Eliza and the Eliza Effect</div>
+		<div class="content">
+			The limitations of the word-by-word <a href="http://www.noospeak.com/noospeak/googletalk/index.php" target="_blank">Google Talk</a> approach became quickly clear: not only the mechanism was way too slow to engage people, but also the sentences generated were often disjointed and rarely made sense. Although the Google's sibylline discourse had some fascination, "Search engine literature" was not one of my aims, so I started looking for an interaction model that was closer to a Web chat. <br>One of the first and most famous experiments in artificial intelligent is <a href="http://en.wikipedia.org/wiki/ELIZA" target="_blank">Eliza</a>, a 1966 computer program designed by Joseph Weizenbaum to simulate a psychoanalyst. You can try it <a href="http://www.manifestation.com/neurotoys/eliza.php3" target="_blank">here</a>. <br>Eliza worked by simple parsing and substitution of key words into canned phrases. Depending upon the initial entries by the user the illusion of a human writer could be instantly dispelled, or could continue through several interchanges. Upon observation, researchers discovered users subconsciously assuming Eliza's questions implied interest in the topics discussed, even when they consciously knew that Eliza did not simulate emotion. This <span class="black">cognitive dissonance</span> between the user's awareness of programming limitations and their behavior towards the output of the program became known as the "Eliza Effect". <br>While Weizenbaum focused on how Eliza "<i>could induce powerful delusional thinking in quite normal people</i>" and wrote a book (Computer Power and Human Reason, 1976) to explain that the internals of computers are not magical, Jane Murray (Hamlet on the Holodeck, 1996) analyzed the Eliza Effect in terms of drama. She viewed Eliza/Doctor as a dramatic character, Weizenbaum as a kind of playwright, and the source of the Eliza Effect in such cases as "<i>the human propensity to suspend disbelief in the presence of a persuasive dramatic presence</i>". Murray made visible what was not clear from Weizenbaum's and other analyses: that people enjoy Eliza. Initial interactions are often quite fun and engaging, and create the sense of open-ended possibilities with an interesting character. <br>There is an initial "boom" of expectations, shortly followed by a "bust", or delusion, that I obviously wished to avoid. <br>I created a <a href="http://www.noospeak.com/noospeak/eliza/" target="_blank">Google's version of Eliza</a>, based on the JavaScript code developed by <a href="http://withoutane.com/" target="_blank">Michal Wallace</a> and <a href="http://www.peccavi.com/" target="_blank">George Dunlop</a>. It was clear that this approach was not enough to keep users engaged for more than a couple of minutes, nor it was suited to get people repeating the experience after their first time. I needed a vast and open content-base (what is more open and richer than the Web?) and a more "intelligent" computational system.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+     
+    <div class="entry" id="e150">
+		<div class="date">29 November 2006</div>
+		<div class="title">Alice</div>
+		<div class="content">
+			The search for an "intelligent" computational system was pretty quick: all links pointed to the <a href="http://www.alicebot.org/" target="_blank">A.L.I.C.E. project</a>. Started by dr. Richard Wallace in 1995, it is an award-winning natural language processing chatterbot, i.e. a program that engages in a conversation with a human by applying some heuristical pattern matching rules to the human's input. Despite A.L.I.C.E. inability to pass the <a href="http://en.wikipedia.org/wiki/Turing_Test" target="_blank">Turing Test</a> (the holy Grail of artificial intelligence) it presented several benefits for my project that were decisive for choosing it against more complex natural language interpreters:
+<br><p class="indent">1) A.L.I.C.E. is an <span class="black">open-source project</span>: a variety of clients have been developed by an enthusiastic community and are free to use and easy to implement with new functionalities
+<br><p class="indent">2) the program uses an XML Schema called <a href="http://www.alicebot.org/aiml.html" target="_blank">AIML</a> (Artificial Intelligence Markup Language) for specifying the heuristic conversation rules; XML is compatible with every programming language
+<br><p class="indent">3) several AIML standard sets are available for quick customization
+<br><p class="indent">4) A.L.I.C.E. clients produce plain text responses that can be directly passed to search engines as query strings.
+<br>My idea was to use a customized A.L.I.C.E. as an <span class="black">artificial intelligence filter</span> between users and the search engine. 
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>		
+    
+    <div class="entry" id="e160">
+		<div class="date">17 December 2006</div>
+		<div class="title">ChatClouds</div>
+		<div class="content">
+			<span class="black">Chatting with Google is like chatting with the Web after Google</span>. <br>If Google were considered a fictional character, it would embody the mainstream thoughts, opinions, tastes, concerns and interests of Web users. A profile of Google's "personality" could be drawn by tracking its conversations and mapping its most frequent topics. My aim was not to create a small-scale replica of <a href="http://www.google.com/press/zeitgeist.html" target="_blank">Google Zeitgeist</a>, but to generate two different profiles:
+<br><p class="indent">1) the average user, gathering data from all users conversations (my little Zeitgeist)
+<br><p class="indent">2) the average mediated user, gathering data from all Google's responses.
+<br>If Google were neutral, the two profiles should virtually match, proving that the biggest search engine is accurately reflecting the global Zeitgeist. But if the difference between the two profiles were significant, then it would be clear that Google is influencing or even manipulating millions of people's clickstreams. This assumption is not rocket science but rather a personal interpretation of data-mining evidence: "questioning the transparency of Google" was later amended from the project's scope.
+<br>The tool chosen to visualize the two aggregated profiles is commonly known as <span class="black"><a href="http://en.wikipedia.org/wiki/Tagcloud" target="_blank">tagcloud</a></span>. A tag is a descriptive word attached to a document (usually a webpage), and a tagcloud is a weighted list of tags, where the most popular are depicted in a larger font or otherwise emphasized. An inspirational work was <a href="http://chir.ag/phernalia/preztags/" target="_blank">US Presidential Speeches Tag Cloud</a> by Chirag Mehta, that shows the popularity, frequency, and trends in the usages of words within speeches, official documents, declarations, and letters written by the Presidents of the USA between 1776 and 2007.
+<br>I began experimenting with tagclouds and developed a small independent project, labeled <a href="http://www.thisisnot.org/" target="_blank">This is not</a>, where tags are used as negative definitions: given a picture, users are prompted to write what that picture is not.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e170">
+		<div class="date">13 January 2007</div>
+		<div class="title">The mRank</div>
+		<div class="content">
+			Being the chatterbot's role clear, I needed a rule (see some <a href="e160/filteringRules.pdf" target="_blank">experiments</a>) for filtering search results, which would then be translated into a ranking algorithm. <br>The one I developed takes into account both the number of occurrences of A.L.I.C.E.'s single words (WordsRank) in Google's results snippets (the short texts describing each link), and the position of the snippet within the result's page (PageRank) that indicates its relevancy. Being WordsRank a quantitative number (the higher, the better) while PageRank is a qualitative number (the lower, the better), a unique ranking value can be obtained by subtracting PageRank from WordsRank.
+<br><span class="black">GlobalRank = WordsRank - PageRank.</span>
+<br>My application's basic flow is therefore:
+<br><p class="indent">1) user types and submits a text
+<br><p class="indent">2) A.L.I.C.E. interpreter generates a response
+<br><p class="indent">3) A.L.I.C.E.'s response text is searched in Google
+<br><p class="indent">4) Google Search results are processed in order to extract the sentence with the highest GlobalRank
+<br><p class="indent">5) the extracted sentence is displayed to the user.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e180">
+		<div class="date">31 January 2007</div>
+		<div class="title">User testing pt.2</div>
+		<div class="content">
+        	I tested <a href="http://www.noospeak.com/noospeak/1.1mRank/index.php" target="_blank">this</a> version of the application (featuring the human-like inter-face and an implementation of A.L.I.C.E. chatterbot) with a crew of fellow students at <a href="http://courses.csm.arts.ac.uk/DisplayCourse.asp?ci=70&ma=3" target="_blank">Central Saint Martins</a>. <br>After that I sent everyone a short questionnaire:
+<br><br><span class="black">1) Did you see the "face" of Google made out of buttons and input boxes? if not, did you try to interact with such buttons/eyes box/nose and what did you think?</span>
+<br><p class="indent">1.1) didnt really see the face, although if it was more clear that it was a face that would be interesting.
+<br><p class="indent">1.2) yes, i saw the face instantly and clicked on the links even at the bottom of the page. (pigeons!)
+<br><p class="indent">1.3) NO. I though they were testing buttons, and in fact they annoyed me. We see this kind of buttons everyday, so it's hard to have a distance and see them as graphic pieces... 
+<br><p class="indent">1.4) Not immediately. I tend to use the internet as a resource of information rather than for entertainment, so I don't often get into interacting for the sake of it.
+<br><p class="indent">1.5) Yes, i saw the face and tried to interact with it
+<br><p class="indent">1.6) I have noticed the face for a while before you showed it to us in the crit, but i always thought it was google changing the name thing as usual.
+<br>
+<br><span class="black">2) What was the first reaction you had after Google answered?</span>
+<br><p class="indent">2.1) didnt get the thing about mocking google. i didnt know it was google answering i just thought you made a chat bot
+<br><p class="indent">2.2) i was curious to see what google would say next.
+<br><p class="indent">2.3) I saw it some weeks ago in class. First reaction was: "hey, google is now into chat! Great, something new from them is always great." Second was try to write something as you do in a chat. When you see the reply you start looking for connections or reasons. First option: I was chatting with other users, all at the same time and mixing (messing) conversations.
+<br><p class="indent">2.4) I thought it was probably trying to sell me something!
+<br><p class="indent">2.5) Some automatic answers. I haven't linked with Google.
+<br><p class="indent">2.6) when i started talking/typing, at first it was natural, (i was getting realistic responses)
+although i did ask simple questions. and at first i thought i was talking to the other people in the group. It was only when i received answers like 'data 6' or something like that that i thought it was a database.
+<br>
+<br><span class="black">3) Did you try to "hack" it? I mean, where you concentrated on understanding the logic of Google answers (the mechanism) or did you enjoy more the content of the conversation?</span>
+<br><p class="indent">3.1) i didnt hack it i was just enjoying what it said back and was hoping it was say funny stuff or insult me back
+<br><p class="indent">3.2) i tried to find the method to the madness..ha...i wanted to figure out where the answers were coming from...if there was a link to key search words and such.
+<br><p class="indent">3.3) Since the conversation was not effective, I tried the same phrase many times to see the answer was the same. Also change the order of words and change the number of characters. 
+<br><p class="indent">3.4) I wasn't that compelled to persist. 
+<br><p class="indent">3.5) I just tried to enjoy the conversation.
+<br>
+<br><span class="black">4) Do you think that if the content were more relevant to your inputs (so, less "Google result style" and more "natural language") you would have been more engaged? Or did you like the unpredictability and arbitraryness of Google outputs?</span>
+<br><p class="indent">4.1) i do like chat bots but maybe more continuity, human language would be good
+<br><p class="indent">4.2) i like the format of conversational output, but i'd want more google-like content.
+<br><p class="indent">4.3) The arbitrariness makes you feel something is happening and start looking for answers. But since you don't have a clue, you loose interest. After your explanation, the unpredictability makes sense but maybe if you show more about the process and the logic of google is more relevant.
+<br><p class="indent">4.4) Maybe. The unpredictable answers gave me the impression that it didn't work properly.
+<br><p class="indent">4.5) I'd like to see more a natural language. the arbitrariness makes the dialog non-sense and I lose my interest.
+<br><p class="indent">4.6) i was really really impressed
+<br>
+<br><span class="black">5) How long did you chat? Would you come back and chat again in the future (be sincere, don't try to please me..imagine this project was done by X)?</span>
+<br><p class="indent">5.1) i would chat in the future but alice bot was more of a conversation, maybe make it a google insult bot
+<br><p class="indent">5.2) i chatted until it didn't respond...
+<br><p class="indent">5.3) 2 minutes? 
+I'll try again only if I can obtain something I'm not getting now in google or another community chat, like for example speak with someone about the same subjetcs I like or find info I don't know how to ask. For example, sometimes you want the title of a song, but you only can sing the music (not the lyrics) I could ask it to a person, but not to google (I know, that's a different project!)
+<br><p class="indent">5.4) A couple of minutes but under normal circumstances I wouldn't bother.
+<br><p class="indent">5.5) maybe 6/7 minutes..I'll just come back if the dialog is makes more sense or if you show more explicitly that the answers are coming from Google
+<br><p class="indent">5.6) i would use it again, but the only thing putting me off is confidentiality, i know you have to know what the results are, but i feel this is slightly off putting.
+<br>
+<br>These results, as well as spoken feedback, evidenced that the inter-face was misleading. A general need for more consistency and variety within Google's discourse also emerged. The Eliza Effect manifested in some users and it was clear that after that boom I needed "fresh" content from the Web to keep the experience interesting. So I decided to revert back to a more standard interface, and include hyperlinks to expand the content of my project.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e190">
+		<div class="date">06 February 2007</div>
+		<div class="title">GoogleSpeaks</div>
+		<div class="content">
+			I decided to call my application GoogleSpeaks: from a practical perspective, as GoogleTalk and GoogleChat already existed, this was the most straightforward name still available. Semantically, the appellation seemed in line with Google's pattern of boring yet self-explanatory names. Visually, I <a href="e190/images.html" target="_blank">parodied</a> the prolific Google Labs logo. Among the hundreds of Google's products, not many would notice <a href="http://www.noospeak.com/noospeak/1.1newInterface/ajax/" target="_blank">my intrusion</a>. I felt like a Yes Man..
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e200">
+		<div class="date">20 February 2007</div>
+		<div class="title">GoogleSpeaks video</div>
+		<div class="content">
+        	Questioning the transparency of Google was still my "mission" when I produced a <a href="http://www.youtube.com/watch?v=GSrc2ZwssAo" target="_blank">short video</a> for the MA mid-term show, which took place at the Westbourne Studios in West London, from February 20 to February 22, 2007.
+<br>Some notes about it:
+<br><span class="black">Google is not transparent</span>, both in terms of content and of expression, because it deeply influences how and what we experience on the Web. It is implicit that Google wants/tries to be transparent in front of its users in many ways:
+<br><p class="indent">.simple interface (no distractions)
+<br><p class="indent">.organic results separated from sponsored ones
+<br><p class="indent">.sponsored results are always contextual
+<br><p class="indent">.fast results
+<br><p class="indent">.results based on computational ranking, no human editing (generally)
+<br>Google’s aim is to become completely transparent, where the perfect user experience would be:
+<br><p class="indent">1) user inputs keyword(s)
+<br><p class="indent">2) Google provides one result only, and redirects to such result webpage, which is the “I’m Feeling Lucky” mode extended to all searches. As stated in their <a href="http://www.google.com/corporate/tenthings.html" target="_blank">corporate philosophy page</a> "<i>Google may be the only company in the world whose stated goal is to have users leave its website as quickly as possible</i>: the less time people spend searching, the better for Google (it means they found what they wanted, so their inputs are more relevant). <br>Google relies on web democracy because its ranking comes from millions of users’ “votes” (links) but its position is that of an organizer. Google organizes the Web, regardless how this is done, and this is a position of power and control: <span class="black">technocracy</span> is the keyword. <br>The Web is enormous, we (users) seek simplicity, Google gives us a simple gateway to the Web. Here comes the restriction. Willing or not, we have to pass through Google’s input box to get where we want.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+    
+    <div class="entry" id="e210">
+		<div class="date">06 March 2007</div>
+		<div class="title">New interface</div>
+		<div class="content">
+			I decided to abandon any "Identity Correction" scope after an eye-opening argument that followed a <a href="e210/presentation.pdf" target="_blank">presentation</a> given to first and second years Digital Media students. I realized that a video would deliver more efficiently any message of criticism (<a href="http://masterplanthemovie.com/" target="_blank">Google Masterplan</a> docet) and I started doubting about the effectiveness of my application in questioning the "transparency" of Google. In fact, some Google's practices can be considered aggressive and they raise legitimate concerns among several observers, yet Google's policy can also be seen as an open, frank policy. As Google co-founder Larry Page pointed out, "<i>...there is no categorical difference between "content extraction" for ad placement and spam filtering: each involves a process that analyzes content of messages</i>". Furthermore, I wanted to avoid the "So what?" effect that in my opinion characterizes a considerable amount of contemporary art works. Instead of criticizing, I could exploit Google's services to build an useful and entertaining tool. It may be naive, but this new perspective was immediately motivational to me.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e215">
+		<div class="date">13 March 2007</div>
+		<div class="title">Filtering options</div>
+		<div class="content">
+			Given the <a href="http://www.goodmagazine.com/section/Transparency/Internet_Porn" target="_blank">huge amount</a> of pornographic or otherwise offending material that can be found on the Web, “Safe Search” has become a standard solution offered by any search engine to give users different options to filter off undesirable results. Google, as many others, has <a href="http://www.google.co.uk/intl/en/help/customize.html#safe" target="_blank">three filtering settings</a>. I decided to exploit this convention to offer users three modes of interaction with my application:
+<li class="indent"><span class="black">Strict filtering</span>: users interact directly with the chatterbot, so that the responses they are given come from an internal database. This mode is useful to get familiar with the behaviours of the artificial intelligence software, and in a further stage (not yet developed as it requires user’s subscription) it will allow people to teach the chatterbot how they wish it to answer, developing their personalized set of patterns. It can be considered a learning mode.</li>
+<li class="indent"><span class="black">Moderate filtering</span>: in this case users inputs are passed to the chatterbot, its response searched in Google and then one sentence extracted from Google’s results. This is the default setting and it allows bringing Web content into the discourse while maintaining the appearance of a conversation.</li>
+<li class="indent"><span class="black">No filtering</span>: this mode turns off artificial intelligence, so that users are directly confronted with Web content. The behaviour of this setting can be considered similar to that of Google's <a href="http://www.google.com/help/features.html#lucky" target="_blank">I’m Feeling Lucky</a>, where the application displays a searching history rather than a proper conversation.</li>
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e220">
+		<div class="date">02 April 2007</div>
+		<div class="title">Human-like Interaction</div>
+		<div class="content">
+			As a consequence of the above mentioned conceptual u-turn, I cleared the <a href="e220/usageScenario.pdf" target="_blank">usage scenario</a>, in particular regarding the role of <a href="e220/chatclouds.png" target="_blank">chatclouds</a> and applied for an international competition held by <a href="http://www.kallideas.it/eng/" target="_blank">Kallideas</a>, an italian company specialized in innovative, technological solutions for managing dialogues between automatic systems and individuals (in other words: artificial intelligence for customer service applications). You can read <a href="e220/concept.pdf" target="_blank">here</a> the concept of what I decide to call NooSpeak.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+    
+    <div class="entry" id="e230">
+		<div class="date">09 April 2007</div>
+		<div class="title">Why NooSpeak?</div>
+		<div class="content">
+			The name <a href="http://www.google.com/corporate/history.html" target="_blank">"Google"</a> is a playful misspelling of Googol, a mathematical nickname for the number made by the digit 1 followed by hundred zeros (1.0e100). NooSpeak's reference instead is the fictional language used by party members in George Orwell's "1984": <a href="http://en.wikipedia.org/wiki/Newspeak" target="_blank">NewSpeak</a>. Orwell included an essay about it in the form of an Appendix, in which the basic principles of the language are explained. Newspeak is closely based on English but has a greatly reduced and simplified vocabulary and grammar. This suited the totalitarian regime of the Party, whose aim was to make any alternative thinking ("thoughtcrime") or speech impossible by removing any words or possible constructs which describe the ideas of freedom, rebellion and so on. Yet Orwell didn't consider that NewSpeak strict logic and simplified grammar would actually fit artificial intelligence needs: for example if "better" became "gooder" and "best" became "goodest" the computational process of interpreting and generating sentences would be simpler. <br>In my idea, NooSpeak is evoking a new language and a new way of interaction between humans and artificial intelligence systems, as well as underlining the dialogical approach to Web search. The logotype design was an <a href="e230/logos.pdf" target="_blank">organic process</a>, where the only guideline was that of communicating the union of search and chat experiences in one application. The chosen logotype plays on duality both with colors and icons, with the double "o" representing the standard icons for search (a magnifier) and chat (a comic balloon).
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+    
+    <div class="entry" id="e240">
+		<div class="date">19 April 2007</div>
+		<div class="title">Authorized Public Interface</div>
+		<div class="content">
+            The coding method I used to extract chatting responses from Google’s results pages proved to be inefficient, as it relied on <a href=" http://en.wikipedia.org/wiki/Screen_scraping" target="_blank">HTML scraping</a> techniques, so that every time Google changed their formats (it happened three times within six months) I had to adapt my <a href="http://en.wikipedia.org/wiki/Php" target="_blank">PHP</a> string parser. The solution was to use the <a href=" http://code.google.com/apis/ajaxsearch/" target="_blank">AJAX Search <acronym title="application programming interface">API</acronym></a> that Google provides upon subscription and allows to hook any application with their search engine database via <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>. As a result, I also decided to ask an <a href="http://services.google.com/permissions/application" target="_blank">official authorization</a> for using Google’s name and brand features. I sent <a href="e240/noLogo.html" target="_blank">this image</a> to test their flexibility with formal elements, and as expected Google’s reply pointed out that “<i>…the mock-up that you sent very closely resembles the Google homepage. We think that the current layout in combination with the use of our name could confuse users.</i>” I therefore sent an updated layout of the <a href="http://www.noospeak.com" target="_blank">homepage</a> and obtained the authorization.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e250">
+		<div class="date">23 April 2007</div>
+		<div class="title">Hyperlinks</div>
+		<div class="content">
+			The power of the Web relies on its <a href="http://www.w3.org/Proposal.html" target="_blank">hypertextual nature</a>, which from a user’s perspective is the potential of making any resource just one click away. Google’s <a href="http://www.google.com/technology/" target="_blank">PageRank</a> also relies on hyperlinks, which are interpreted as votes: the more a Web resource is hyperlinked, the more valuable is considered. Put in a simple syllogism: the Web would simply not exist without hyperlinks, my application aims to be a “chat with the Web”, therefore it needs hyperlinks. <br>Using the Google Search API made their implementation an easy step, as <a href="http://code.google.com/apis/ajaxsearch/documentation/reference.html#_class_GwebResult" target="_blank">results</a> come nicely divided in their components: title, snippet (description), url, cached url and so on. Every NooSpeak's entry (in moderate and unfiltered modes) is therefore a link to the Web resource from which Noospeak's sentence was extracted.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+    
+    <div class="entry" id="e260">
+		<div class="date">09 May 2007</div>
+		<div class="title">TakeAway Festival</div>
+		<div class="content">
+			NooSpeak was selected for the <a href="http://www.takeawayfestival.com/" target="_blank">TakeAway Festival</a>, an event that took place at the <a href="http://www.danacentre.org.uk/" target="_blank">Dana Centre</a> from May 09 to May 11, 2007, featuring workshops, lectures and works from an international array of designers and artists. The mission of the Festival was to give visibility to people that “<i>…more and more are transforming themselves from media consumers to producers - using the new tools, software and technologies now at their disposal</i>”. During the three days of the Festival NooSpeak was visited 917 times, but unfortunately I could not be present at the venue to run a user-testing session. The Festival also provided NooSpeak with fresh <a href="http://urchin.earth.li/cgi-bin/twic/wiki/view.pl?page=GoogleJuice" target="_blank">Google Juice</a> and a very well written <a href="http://www.takeawayfestival.com/node/129" target="_blank">press release</a>: “<i>Italian Matteo Menapace who is on the verge of finishing his Masters Degree at Central Saint Martins College of Art and Design is introducing his thesis Project NooSpeak. The online application, which manipulates data provided by a very popular search engine, takes certain aspects of the typical searching experience to develop a different form of verbal communication between the user and the software agent, a kind of chat facility between the user and the search engine. NooSpeak questions the assumed transparency of a search engine both in terms of content and expression. With search engines being such standard tools in today’s Web environment, Menapace’s work is a timely reminder of their influence on behaviour and language.</i>”
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e270">
+		<div class="date">24 May 2007</div>
+		<div class="title">Frameworks for the future</div>
+		<div class="content">
+			NooSpeak is at the moment a growing patchwork of different applications: a chatterbot, a search engine interface, a ranking software and a tagcloud generator. There is a clear need for restructuring the code architecture and for standardization of the various components, on a solid platform that also allows for future extensions or modifications. <br>Standardization becomes crucial when working in teams, and I am now working with two PHP developers, Daniel Infante and <a href="http://www.walterfranchetti.com/" target="_blank">Walter Franchetti</a>, to make NooSpeak a “real-life” service.
+We decided to use the <a href="http://framework.zend.com/" target="_blank">Zend framework</a>, which is an open-source project supported by a large community of developers and major companies (such as <a href="http://www.zend.com/products/zend_core/zend_core_for_ibm" target="_blank">IBM</a>), with the aim of providing an architecture for developing entire applications with no other library dependencies. It is very comprehensive, well documented, and relatively easy to use.
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>
+    
+    <div class="entry" id="e280">
+		<div class="date">06 June 2007</div>
+		<div class="title">Creative Commons</div>
+		<div class="content">
+			Please note that the content of this <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dc:type">documentation</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Attribution 3.0 License</a>. Please respect also the copyright of all linked resources. <br>If you wish to obtain samples of the application's code, participate to the project, or just get in touch, drop a line to <span class="black">i.am.dissatisfied@gmail.com</span>
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	
+    
+    <center><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a></center><br>
+	
+	
+	
+	<!--<acronym title=""></acronym>
+	<span class="missing"></span>
+	<a href="" target="_blank"></a>
+	
+	<div class="entry" id="e">
+		<div class="date"><span class="missing">28 May 2007</span></div>
+		<div class="title"></div>
+		<div class="content">
+		
+		</div>
+		<div class="backToIndex"><a href="#index">Index</a></div>
+	</div>	-->
+	
+	
+
+
+	</body>
+</html>

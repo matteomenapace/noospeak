@@ -1,0 +1,28 @@
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin:0;
+	height:100%;
+	line-height:1.1em;
+}	
+
+#logo {
+	background: url(../images/logo_gSpeaks.gif) no-repeat; 
+	display:block;
+	width:276px; height:110px;
+	margin:1em;
+	margin-bottom:2em;
+}
+
+#inputbox {
+	width:25em;
+	font-size:0.9em;
+}
+
+#form, #links{
+	font-size:0.9em;
+}
+
+#copyright {
+	font-size:0.7em;
+	margin-top:1em;
+}

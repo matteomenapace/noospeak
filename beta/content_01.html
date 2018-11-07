@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+
+<script type="text/javascript">
+	var count = 0;
+	
+	var entryBody = "<div class='name' id='google'>google:</div><div class='content'> bla bla</div><div class='time'>sometime</div><div class='place'>somewhere</div><div class='similar-topic'>similar topic</div><div class='more'>more</div>";
+		
+		//<div class='entry' id='entry001'>
+
+	function getElementById(id) {
+		var element;
+ 		if(document.getElementById)	element = document.getElementById(id);
+ 		else element = document.all[id];
+ 		return element;
+	}
+
+	function replaceContent(elementId, replaceText){
+			parent.document.getElementById(elementId).innerHTML = replaceText;
+	}
+
+	function addEntry(elementId){
+	    var lastEntry = "entry"+count;
+		parent.document.getElementById(lastEntry).className = "entry";
+		count++;
+		var entryId = "entry"+count;
+		var entry = "<div class='last-entry' id='"+entryId+"'>";
+		entry += entryBody + "</div>";
+		parent.document.getElementById(elementId).innerHTML += entry;
+	}	
+	
+</script>
+
+<link href="matevz.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<a id='click-me' href=# onclick="replaceContent('test',this.innerHTML)">click me</a><br>
+
+<a id='click-me' href=# onclick="addEntry('leftbar')">add an entry</a><br>
+
+xxx<br />
+xxx<br />
+xxx<br />
+xxx<br /> 
+xxx<br />
+xxx<br />
+xxx<br />
+xxx<br /> 
+xxx<br />
+xxx<br />
+xxx<br />
+xxx<br /> 
+xxx<br />
+xxx<br />
+xxx<br />
+xxx<br /> 
+xxx<br />
+xxx<br />
+xxx<br />
+xxx<br /> 
+xxx<br />
+xxx<br />
+xxx<br />
+xxx<br /> 
+xxx
+</body>
+</html>

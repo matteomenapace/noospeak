@@ -1,0 +1,124 @@
+body, html { font-family: Arial, Helvetica, sans-serif; font-size:0.9em; margin:0; padding:0; height:100%; }
+
+p {margin:0;}
+
+ul { margin:0; padding:0; }
+
+li {list-style:none; padding:0; margin:0;}
+
+a { color:#000000; }
+a:hover { color:#FFFFFF; }
+a:visited { color:#CCCCCC; }
+
+.inputBox { font-size:0.9em; }
+
+.blueBox { background: url(../images/blue_pixel.png) repeat; display:block; color:#FFFFFF;}
+
+.greyBox { background:#999999; margin-bottom:1.5em; padding:6px 4px; }
+
+.label{ font-size:1.3em; color:#FFFFFF; padding-left:4px; padding-bottom:6px; }
+
+.arrow { background: url(../images/blue_arrow.png) no-repeat; display:block; width:30px; height:30px; float:left; margin:0; }
+
+
+/* ///////////////////////// SWITCH //////////////////////// */
+
+#start { margin:0 auto; width:740px; display:none; }
+#conversation {display:block;}
+
+
+/*#start { margin:0 auto; width:740px; }
+#conversation {display:none;}*/
+
+
+/* ///////////////////////// START //////////////////////// */
+
+#startLogo { background: url(../images/logo_big_01.gif) no-repeat; display:block; width:406px; height:77px; margin:2em; margin-left:150px; /*margin-bottom:2em;*/ }
+
+#startCenter { float:left; margin-left:150px; padding:10px; font-size:1.1em; }
+
+#inputStart { width:380px; }
+
+#startArrow { margin-top:1.7em; }
+
+#startRight { /*background:#CC9933;*/ margin-top:1.5em; float:right; width:150px; }
+
+#filterBox { margin-top:0.5em; }
+
+#filterBox, #disclaimer { font-size:0.8em; }
+
+#navStart li { padding:2px 4px; }
+
+#disclaimerContent { color:#FFFFFF; padding-left:4px; }	
+
+#startFootnote { /*background:#cc9;*/ clear:both; font-size:0.7em; }
+
+
+/* ///////////////////////// CONVERSATION //////////////////////// */
+
+#conversationHeader { /*background:#993366;*/ position:absolute; width:100%; height:60px; top:0; left:0; }
+
+#conversationLogo span{ background: url(../images/logo_medium_01.gif) no-repeat; float:left; display:block; width:203px; height:39px; margin-top:10px; margin-left:12px; }
+
+#conversationHeader .navigation { position:absolute; top:25px; left:225px;}
+#conversationHeader .navigation li { display:inline; list-style:none; font-size:1.1em; margin-right:0.5em; padding-right:0.75em; border-right:1px solid #999; }
+#conversationHeader .navigation li.last { border-right:none; }
+#conversationHeader .navigation a:hover{ color:#666666; }
+
+#conversationWrap { position:absolute; top:60px; left:0px; bottom:70px; right:0px; }
+
+#chatLogWrap, #chatClouds {width:50%; height:100%;}
+
+#chatLogWrap { position:relative; float:left; background: url(../images/blue_pixel.png) repeat; /*background:#3366FF;*/ }
+
+#chatLog { background:#FFFFFF; margin:1%; margin-bottom:0px; overflow:auto; height:99%; }
+
+.chatCloud {}
+.chatCloud .header { height:1em; }
+.chatCloud .navigation { font-size:0.9em; color:#FFFFFF;}
+.chatCloud .label {font-size:1.2em; padding:0; margin:0; color:#FFFFFF; line-height:1em;}
+
+#chatClouds { position:relative; float:right; }
+
+#chatCloudTop, #chatCloudBottom { background:#66FF00; height:50%; position:relative; }
+
+/*#chatCloudTop { background:#996633; }
+#chatCloudBottom { background:#336666; }*/
+
+.chatCloudContent {width:100%; height:100%; overflow:auto; }
+
+#conversationFooter { position:absolute; width:100%; height:70px; bottom:0; z-index:10; background:#FFFFFF; }
+
+#conversationBlueBox { float:left; width:50%; height:100%; }
+
+#filterBoxConversation { float:right; width:150px; margin:2%; background:#999999; padding:4px; }
+
+#status { float:left; margin:0 1%; position:absolute; bottom:35px;}
+
+#inputConversation { float:left; width:48%; margin:0 1%; position:absolute; bottom:10px; }
+
+#conversationArrow { margin-top:35px;}
+
+#conversationButton { float:left; margin-top:31px; }
+
+#conversationFootnote { font-size:0.7em; position:absolute; bottom:5px; right:5px;}
+
+
+
+.entry, .last-entry { font-size:0.9em; padding:4px;}
+
+.entry .name { font-size:1.2em; font-weight:bold; color: #0000cc; }
+
+.entry .content { font-size:1.1em; }	
+
+.entry .time, .entry .place { /*font-size:0.9em;*/ display:inline; /*color:green;*/ /*the google original*/ color:#999; }
+
+.entry { margin-bottom:10px; }
+.entry .more { display:none; }
+.entry  .similar-topic { display:inline; }
+
+.last-entry { margin-bottom:0;}
+.last-entry .more {display:inline; }
+.last-entry  .similar-topic { display:none; }
+	
+	

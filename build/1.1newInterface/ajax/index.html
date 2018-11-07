@@ -1,0 +1,129 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>GoogleSpeaks</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<style type="text/css" media="screen">
+	@import "css/googleAjax02.css";
+</style>
+<script type="text/javascript" src="js/utility.js"><!--// ajax utility //--></script>
+<script  type="text/javascript">
+	document.onkeypress = manageKeyPress;
+	window.onresize=resizeClouds;
+</script>
+</head>
+
+
+<body onLoad="getElementById('inputStart').focus();">
+
+<div id="botname">Google alpha 01</div>
+
+
+<!--START-->
+<div id="start">
+<center>
+	<div id="logo"></div>
+
+	<div class="form">
+	<form method="get" name="startForm">
+		<table cellpadding=0 cellspacing=0>
+      		<tr valign=top>
+        		<td width=25%>&nbsp;</td>
+       			<td align=center nowrap>
+          			<input autocomplete="off" id="inputStart" class="inputBox" type="text" name="input" value="">
+		          	<br>
+          			<input type="button" value="Speak to Google" onClick="return loadResponse()"><input type="button" value="I'm Feeling Curious">
+				</td>
+				<td align="left" width=25% class="preferences" id="preferences">
+					<input id='strict-filter' type='radio' name='filter' value='on' title="Pure Artificial Intelligence. It may be boring, after a while." >Use strict filtering<br>
+					<input id='moderate-filter' type='radio' name='filter' value='moderate' title="Artificial Intelligence applied to filter Web results." checked>Use moderate filtering<br>
+					<input id='no-filter' type='radio' name='filter' value='off' title="Pure Web discourse. It may not make much sense, sometimes.">Do not filter my conversation
+				</td>
+        	</tr>
+    	</table>
+	</form>
+	</div>
+	
+	<div id="links">
+		Chat with your favourite search engine. <a href="faq/01.html">Learn more</a>
+		<br><br><br>
+		<a href="mailto:i.am.dissatisfied@gmail.com">Feedback</a> - 
+		<a href=#>Privacy</a> - 
+		<a href=#>Terms of Use</a>
+	</div>
+	
+	<div id="copyright">
+    	&copy;2007 Google - All rights and wrongs reversed
+	</div>
+	
+</center>	
+</div>
+
+
+<!--CONVERSATION-->
+<div id="conversation">
+
+	<div id="bars-wrap">
+		
+		<div id="leftbar" onMouseUp="	getElementById('inputConversation').focus()">
+				<!--chat History-->
+		</div>
+	
+		<div id="rightbar">
+			<div class="chatcloud" id="users">
+				<div class="header" id="usersHeader">
+					<div class="label">users</div>
+					<div class="navigation">
+						<b>View: </b><a href=#>most popular</a> - <a href=#>most recent</a> - <a href=#>all</a>	
+					</div>
+					<div class="status" id="usersStatus">status</div>
+				</div>		
+				<div class="cloud" id="usersCloud"><!--Users chatCloud--></div>	
+			</div>
+			<div class="chatcloud" id="google">
+				<div class="header" id="googleHeader">
+					<div class="label">google</div>
+					<div class="navigation">
+						<b>View: </b><a href=#>most popular</a> - <a href=#>most recent</a> - <a href=#>all</a>
+					</div>
+					<div class="status" id="googleStatus">status</div>
+				</div>	
+				<div class="cloud" id="googleCloud"><!--Google chatCloud--></div>	
+			</div>
+		</div>
+	
+	</div>
+
+	<div id="footer">
+		
+		<a id="logo-small" href=""><span></span></a>
+		
+		<div class="box" >
+			<div class="status" id="status">
+				<!--Google is thinking...-->
+			</div>
+		
+			<div class="form">
+			<form method="get" name="chatform" autocomplete="off">
+				<input id="inputConversation" class="inputBox" type="text" name="input" value="">
+				<input type="button" value="Speak to Google" onClick="return loadResponse()">
+			 
+				<!--<input type="hidden" name="<?php session_name(); ?>" value="<?php echo $uid; ?>">-->
+				<!--<input type="hidden" name="botname" value="Google alpha 01"> -->
+			</form>
+			</div>
+		
+			<ol id="navigation">
+				<li><a href="faq/01.html">F.A.Q.</a></li>
+				<li><a href="mailto:i.am.dissatisfied@gmail.com">Feedback</a></li>
+				<li><a href=#>Privacy</a></li>
+				<li class="last"><a href=#>Terms of Use</a></li>
+			</ol>	
+		
+		</div>	
+	</div>
+</div>
+
+</body>
+</html>

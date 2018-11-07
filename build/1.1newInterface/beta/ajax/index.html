@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" >
+<head>
+<title>GoogleSpeaks Ajax</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript" src="utility.js"><!--// ajax utility //--></script>
+<script type="text/javascript"><!--//
+
+// funzione di caricamento testo,
+// accetta una stringa contenente
+// il nome di un file da leggere
+//function loadResponse(fileName) {
+function loadResponse() {
+	var ajax = assignXMLHttpRequest(),
+	input = getElementById("inputBox").value,
+	fileName = '../grespondAjax.php?input='+input,
+    content = getElementById("content"),
+	status = getElementById("status"),
+    // risultato booleano di funzione
+    usaLink = true;
+	
+	// sposta l'input dell'utente dal box al div
+	content.innerHTML += "<br><b>Me:</b> "+input;
+	//input = "";
+	getElementById("inputBox").value = "";
+  
+  	// se l'oggetto XMLHttpRequest non è nullo
+  	if(ajax) {
+    	// il link al file non deve essere usato
+    	usaLink = false;
+
+	    // impostazione richiesta asincrona in GET del file specificato
+    	ajax.open("get", fileName, true);
+
+    	// rimozione dell'header "connection" come "keep alive"
+    	ajax.setRequestHeader("connection", "close");
+
+    	// impostazione controllo e stato della richiesta
+    	ajax.onreadystatechange = function() {
+			
+			//if(ajax.readyState === readyState.INACTIVE) status.innerHTML = "<br>Google is waiting for you to click the bloody link, INACTIVE";
+			
+			//if(ajax.readyState === readyState.INITIALIZED) status.innerHTML = "<br>Your request has been INITIALIZED. Congratulations!";
+			if(ajax.readyState === readyState.INITIALIZED) status.innerHTML = "Google is thinking...";
+			
+			//if(ajax.readyState === readyState.SENT) status.innerHTML = "<br>Now it's been SENT";
+			if(ajax.readyState === readyState.SENT) status.innerHTML = "Google is still thinking...";
+			
+			//if(ajax.readyState === readyState.RECEIVED) status.innerHTML = "<br>Oh, your request has been RECEIVED...";
+      		if(ajax.readyState === readyState.RECEIVED) status.innerHTML = "Google is typing..";
+			
+      		if(ajax.readyState === readyState.LOADED) {
+				status.innerHTML = "Google wrote something. Now it's your turn.";
+				//alert("ajax.readySate: "+ ajax.readyState);
+        		// verifica della risposta da parte del server
+				//alert("ajax.status: " + ajax.status);
+        		if(statusText[ajax.status] === "OK")
+          			// operazione avvenuta con successo
+          			content.innerHTML += "<br><b>Google:</b> " + ajax.responseText;
+        		else {
+          			// errore di caricamento
+          			status.innerHTML = "Google cannot hear you!";
+          			status.innerHTML += "It's your fault, precisely: " + statusText[ajax.status];
+					//status.innerHTML += "<br>ajax.status: " + ajax.status;
+        		}
+			} 
+		}
+		// invio richiesta
+  		ajax.send(null);
+	}
+	//alert(usaLink);
+  	return usaLink;
+} 
+
+//--></script>
+
+<style type="text/css" media="all">
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 0.9em;
+ background: #FFF;
+ color: #000;
+}
+h1 {
+ font-size: 1em;
+ text-transform:uppercase;
+ margin-bottom:20px;
+ border-bottom: 1px solid silver;
+ color: #009;
+}
+#status {
+	color:#999;
+	font-size:0.8em;
+/*	padding:5px;
+	border:1px dotted #666;*/
+}
+</style>
+
+</head>
+
+
+<body onload="getElementById('inputBox').focus();">
+
+<div>
+	<h1>Ajax test</h1>
+	<div id="form">
+		<form method="get" >
+			<input type="text" id="inputBox" name="input" value="" style="width:20em;" />
+			<!--<input type="submit" value="Speak to AJAXGoogle" onclick="return loadResponse('../grespondAjax.php?input='+getElementById('inputBox').value);" />-->
+			<input type="submit" value="Speak to AJAXGoogle" onclick="return loadResponse();" />
+		</form>
+	</div>
+	<br />
+	<div id="status">
+		<!--di seguito verrà visualizzato lo status della richiesta-->
+		Google is waiting...
+	</div>
+	<br />
+	<div id="content">
+		<!--Qui verrà visualizzata la chat-->
+		<!-- è importante fare caso alla costruzione di questo link: permette di leggere il testo anche senza AJAX -->
+		<!--<a href="../grespondAjax.php" onclick="return loadResponse(this.href);" onkeypress="return this.onclick();" tabindex="1">questo link</a>.-->
+	</div>
+	
+
+</div>
+
+</body>
+</html>

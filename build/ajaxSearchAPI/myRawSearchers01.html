@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Raw Searchers - Google AJAX Search API demo</title>
+    <link href="../../css/gsearch.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    td {
+      vertical-align : top;
+    }
+
+    td.search-form {
+      width : 300px;
+    }
+
+    td.search-options {
+      padding-left : 20px;
+    }
+	
+	.gsc-input {
+		width:300px;
+	}
+	
+	#results .sentence {
+		background:#CCFF66;
+		border: 1 px solid #CCCCCC;
+		padding: 2px;
+		margin-bottom: 4px;
+	}	
+
+    #results .header {
+      font-size : 16px;
+      font-weight : bold;
+      margin-bottom : .25em;
+      margin-top : 1em;
+    }
+
+    #results .gs-result {
+      margin-bottom : .5em;
+    }
+
+    #results div.gs-watermark {
+      display : none;
+    }
+
+
+    </style>
+	<script src="http://www.google.com/uds/api?file=uds.js&amp;v=1.0&amp;key=ABQIAAAAJEZgazCxg-mkIInnslzBPBTZbOCVrw7JuujFhfgSl2g24yPDJRRvm--hxUymxwwftQdMSzSlyP-WVA" type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+
+	var searchControl; 
+
+    function OnLoad() {
+		searchControl =  new RawSearchControl();
+    }
+
+    /**
+     * The RawSearchControl demonstrates how to use Searcher Objects
+     * outside of the standard GSearchControl. This includes calling
+     * searcher .execute() methods, reacting to search completions,
+     * and if you had previously disabled html generation, how to generate
+     * an html representation of the result.
+     */
+    function RawSearchControl() {
+      // latch on to key portions of the document
+      this.results = document.getElementById("results");
+
+      // create map of searchers as well as note the active searcher
+      this.activeSearcher = "web";
+      this.searchers = new Array();
+
+      // wire up a raw GwebSearch searcher
+      var searcher = new GwebSearch();
+      searcher.setNoHtmlGeneration();
+	  searcher.setResultSetSize(GSearch.LARGE_RESULTSET) ;// sets the size of results' object (large = 8 results)
+      searcher.setSearchCompleteCallback(this, RawSearchControl.prototype.searchComplete, [searcher]); // sets the function to be called (+arguments) when a search is completed
+      this.searchers["web"] = searcher;
+    }
+
+    /**
+     * figure out which searcher is active by looking at the radio
+     * button array
+     */
+    RawSearchControl.prototype.computeActiveSearcher = function() {
+      for (var i=0; i<this.searcherform["searcherType"].length; i++) {
+        if (this.searcherform["searcherType"][i].checked) {
+          this.activeSearcher = this.searcherform["searcherType"][i].value;
+          return;
+        }
+      }
+    }
+
+    /**
+     * onSubmit - called when the search form is "submitted" meaning that someone pressed the search button or hit enter. 
+	 * value of the input box is passed as an argument
+     */
+	RawSearchControl.prototype.onSubmit = function(value) {
+		if (value) this.searchers[this.activeSearcher].execute(value);
+      	return false;
+    }
+
+    /**
+     * onClear - called when someone clicks on the clear button (the little x)
+     */
+    RawSearchControl.prototype.onClear = function(form) {
+      this.clearResults();
+    }
+
+    /**
+     * searchComplete - called when a search completed. Note the searcher
+     * that is completing is passes as an arg because thats what we arranged
+     * when we called setSearchCompleteCallback
+     */
+    RawSearchControl.prototype.searchComplete = function(searcher) {
+      // always clear old from the page
+      this.clearResults();
+
+      // if the searcher has results then process them
+      if (searcher.results && searcher.results.length > 0) {
+
+		// print the result descriptions
+		var div = createDiv("Result Descriptions", "header");
+		this.results.appendChild(div); 
+        for (var i=0; i<searcher.results.length; i++) {
+          	var result = searcher.results[i];
+          	var content = result.content;
+		  	var url = result.url;
+		  	var linkSentence = "<a href='"+url+"' target='_blank' >"+content+"</a>";
+			div = createDiv(linkSentence, "sentence");
+          	this.results.appendChild(div);
+        }
+      }
+    }
+
+    /**
+     * clearResults - clear out any old search results
+     */
+    RawSearchControl.prototype.clearResults = function() {
+      removeChildren(this.results);
+    }
+
+    /**
+     * Static DOM Helper Functions
+     */
+    function removeChildren(parent) {
+      while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+      }
+    }
+    function createDiv(opt_text, opt_className) {
+      var el = document.createElement("div");
+      if (opt_text) {
+        el.innerHTML = opt_text;
+      }
+      if (opt_className) { el.className = opt_className; }
+      return el;
+    }
+	
+
+
+    // register to be called at OnLoad when the page loads
+    GSearch.setOnLoadCallback(OnLoad);
+    //]]>
+    </script>
+  </head>
+  
+  
+  <body>
+    	
+      <table>
+		<tr><td><input type="text" id="myInputBox" value="" /></td></tr>	
+		<tr><td><input type="button" onclick="searchControl.onSubmit(document.getElementById('myInputBox').value);" value="Search!" /></td></tr>	
+      </table>
+	
+    <div id="results"></div>
+  </body>
+</html>

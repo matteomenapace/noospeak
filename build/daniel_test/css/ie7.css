@@ -1,0 +1,18 @@
+#wrap {
+	/*position:fixed; */
+	position:absolute;
+	top:4px; left:4px; 
+	/*bottom:74px; right:4px;*/
+	
+	/*left: expression( ( 20 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( 10 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );*/
+  
+	/*width: expression(((bodyWidth = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft) - 30) + 'px');*/
+	/*width: expression(document.body.clientWidth <755? "750px" : "98%");*/
+  	width: expression((width = document.body.clientWidth - 8) + 'px');
+	height: expression((height = document.body.clientHeight - 78) + 'px');
+	
+	
+
+}
+

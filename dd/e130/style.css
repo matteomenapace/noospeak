@@ -1,0 +1,254 @@
+body {
+	background: #fff;
+	font: normal 13px/20px "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana, Arial, sans-serif;
+	color: #000000;
+	margin: 15px;
+	text-align: left; /* For IE */
+	}
+
+p {
+	margin: 0 0 5px 0;
+	}
+
+p.p1 {
+	font-size: 13px;
+	line-height: 16pt;
+	}
+
+p.p2 {
+	font-size: 12px;
+	line-height: 12pt;
+	}
+
+p.p3 {
+	font-size: 10px;
+	line-height: 10pt;
+	}
+
+h3 {
+	color: #CC0000;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 30px 0 2px 0;
+	}
+
+a:link, a:visited {
+	color: #999999;
+	text-decoration: none;
+	}
+
+a:hover, a:active {
+	color: #fff;
+	background: #CC0000;
+	}
+
+ul {
+	margin: 0;
+	padding: 0 23px 10px 27px;
+	list-style: none;
+	line-height: 1.2em;
+	}
+
+li {
+	padding-bottom: 7px;
+	}
+
+acronym {
+	font-style: normal;
+	border-bottom: 1px dotted #666;
+	cursor: help;
+	}
+
+.accesskey {
+	text-decoration: underline;
+	}
+
+/* Container Styles */
+
+#container {
+	position: relative;
+	width: 720px !important;
+	width /**/: 750px;
+	border: 15px solid #fff;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left; /* For IE, see above */
+	background-color: #fff;
+	background-image: url(images/container_bg.gif);
+	background-repeat: repeat-y;
+	}
+
+/* Intro Styles */
+
+#pageHeader {
+	width: 720px;
+	height: 220px;
+	background-color: #18d;
+	background-image: url(images/title.jpg);
+	background-repeat: no-repeat;
+	}
+
+#pageHeader h1, #pageHeader h2 {
+	text-indent: -999em;
+	margin: 0;
+	}
+
+#quickSummary {
+	width: auto;
+	height: auto;
+	border-top: 1px solid #fff;
+	background: #147;
+	}
+
+#quickSummary p.p1 {
+	position: absolute;
+	left: -999em;
+	}
+
+#quickSummary p.p2 {
+	width: 248px !important;
+	width /**/: 276px;
+	height: 28px !important;
+	height /**/: 39px;
+	color: #6cf;
+	margin: 0;
+	padding: 11px 0 0 27px;
+	border-right: 1px solid #fff;
+	}
+
+#quickSummary a:link, #quickSummary a:visited {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	}
+
+#quickSummary a:hover, #quickSummary a:active {
+	text-decoration: underline;
+	background: transparent;
+	}
+
+/* Supporting Text Styles */
+
+#preamble, #explanation, #participation, #benefits, #requirements {
+	margin: 0 50px 0 320px;
+	}
+
+#footer {
+	width: 708px !important;
+	width /**/: 720px;
+	height: 24px !important;
+	height /**/: 30px;
+	background: #18d;
+	margin-top: 15px;
+	padding: 6px 12px 0 0;
+	border-top: 1px solid #fff;
+	text-align: right;
+	}
+
+#footer a:link, #footer a:visited {
+	text-transform: uppercase;
+	color: #fff;
+	}
+
+#footer a:hover, #footer a:active {
+	color: #18d;
+	background: #fff;
+	}
+
+/* Link List Styles */
+
+#linkList {
+	position: absolute;
+	top: 352px;
+	left: 0px;
+	width: 275px;
+	border-bottom: 1px solid #fff;
+	}
+
+#linkList h3 {
+	text-indent: -1100px;
+	height: 45px;
+	margin: 0;
+	}
+
+#linkList a:link, #linkList a:visited {
+	font-size: 11px;
+	color: #fff;
+	}
+
+#linkList a:hover, #linkList a:active {
+	background: #fff;
+	}
+
+#linkList a.c {
+	font-size: 10px;
+	}
+
+#linkList acronym {
+	border-bottom: none;
+	}
+
+#lselect, #lfavorites {
+	border-top: 1px solid #fff;
+	background: #18d;
+	}
+
+#lselect h3 {
+	background-image: url(images/select.gif);
+	}
+
+#lfavorites h3 {
+	background: url(favourites.gif);
+	}
+
+#lselect li, #lfavorites li {
+	color: #6cf;
+	background-image: url(images/select_bg.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	}
+
+#lselect a:hover, #lselect a:active, #lfavorites a:hover, #lfavorites a:active {
+	color: #18d;
+	}
+
+#larchives {
+	border-top: 1px solid #fff;
+	background: #9c0;
+	}
+
+#larchives h3 {
+	background-image: url(images/archives.gif);
+	}
+
+#larchives li {
+	color: #cf3;
+	background-image: url(images/archives_bg.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	}
+
+#larchives a:hover, #larchives a:active {
+	color: #9c0;
+	}
+
+#lresources {
+	border-top: 1px solid #fff;
+	background: #d8c;
+	}
+
+#lresources h3 {
+	background-image: url(images/resources.gif);
+	}
+
+#lresources li {
+	color: #fcc;
+	background-image: url(images/resources_bg.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	}
+
+#lresources a:hover, #lresources a:active {
+	color: #d8c;
+	}

@@ -1,0 +1,14 @@
+
+
+#startCenter { width:400px; height:60px; }
+
+#inputStart { /*margin:0;*/ position:absolute; }
+
+#conversationWrap { 
+	position:absolute; top:60px; left:0px; 		
+	width: 800px;
+	height:600px;
+	/*height: expression((height = document.body.clientHeight - 130) + 'px');*/ 
+}
+
+

@@ -1,0 +1,94 @@
+html,body {
+	margin: 0;
+	padding:0
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width: 300px;
+	/*border:#0000FF dotted 1px;*/
+	margin-bottom:5px;
+	padding:0px;
+}
+
+#history {
+	overflow:auto;
+	width:300px; 
+	height:150px;
+	padding-top: 3px;
+	padding-left: 3px; 
+	padding-right: 3px;  
+	margin-bottom:10px;
+	border:1px solid #CCCCCC;
+	font-size:13px;
+	vertical-align:top;
+	text-align:left;
+}
+
+.name, .text {
+	padding:2px;
+}
+
+.google, .user {
+	margin-bottom:3px;
+}
+	
+.google .name{
+	background-color:#BED2E6;
+	border-bottom: 1px solid #A0BEDC;
+}
+
+.google .text {
+	background-color:#E5ECF9;
+}
+
+.user .name{
+	background-color:#A0E682;
+	border-bottom: 1px solid #96D282;
+}
+
+.user .text {
+	background-color:#E6FAD2;
+}
+
+.eyebrow {
+	width:80px; 
+	/*height:20px;*/
+}
+
+.eye {
+	vertical-align:top;
+}
+
+#nose {
+	width:40px;
+	height:80px;
+}
+
+#beard {
+	width:220px;
+	height:80px;
+	background-color:#E5ECF9;
+}
+
+#mouth {
+	padding:10px;
+	vertical-align:top;
+}
+
+#box {
+	width:200px;
+	font-size:13px;
+}
+
+#logo img {
+	border:0px;
+}
+#logo:hover, #logo:active {
+	background:#fff;
+}
+
+

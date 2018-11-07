@@ -1,0 +1,118 @@
+html,body {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:76%;
+	/*font-size: 12px;*/
+	text-align:center;
+	background-image:url(../images/backgrounds/background02.gif); 
+	background-repeat:repeat;
+  	background-position:top left;
+}
+
+a:hover, a:active {
+	background:#9c0;
+}
+
+#container {
+	width:50em;
+	margin: 0px auto;
+	text-align:left;
+}
+
+#logo img {
+	border:0px;
+}
+#logo:hover, #logo:active {
+	background:#fff;
+}
+
+#header, #form, #tagcloud, #sentences, #menu {
+	background-color:#FFFFFF;
+	margin:20px;
+	padding:20px;
+}
+
+#header {
+	width:114px;
+	padding-bottom:14px;
+}
+
+#form {
+	width:30em;
+	height:2em;
+}
+
+#inputbox {
+	/*font-size:12px;*/
+	 width:16em;
+}
+
+#tagcloud {
+	width:45em;
+}
+
+#sentences {
+	width:30em;
+}
+
+ul.sentences {
+	list-style:none;
+	margin:0; 
+	padding:0;
+}
+
+li {
+	list-style:none;
+	padding-left:66px;
+	padding-right:0.5em;
+	margin-bottom:5px;
+	background-image:url(../images/this-is-not-list.gif);
+	background-repeat:no-repeat;
+  	background-position:0 0.25em;
+}
+
+#menu {
+	width:21em;
+	line-height:1.6;
+}
+
+.button {
+	border-left:1px solid #9c0;
+}
+
+.button:hover, .button:active {
+	background:#9c0;
+}
+
+.button a:link, .button a:visited {
+	color:#000;
+	text-decoration:none;
+}
+
+.button a:hover, .button a:active {
+	background:none;
+}
+
+.explanation {
+	display:none;
+	padding:2px;
+	padding-top:1em;
+	text-align:left;
+	/*
+	font-size:80%;
+	font-size:11px;
+	text-align:justify;
+	color:#666666;
+	*/
+}
+
+#email {
+	background:url(../images/email.gif) no-repeat;
+	background-position:0px 4px;
+}
+
+

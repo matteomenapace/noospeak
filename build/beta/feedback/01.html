@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>NooSpeak Feedback</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="NooSpeak is an innovative approach to Web search. You can chat with to your favourite search engine, instead of squeezing your brain to find the right set of keywords.">
+<link rel="icon" href="../images/favicon.ico" />
+
+<style type="text/css"> 
+	body{font-family:Arial, Helvetica, sans-serif; font-size:0.9em; margin:0; padding:0;}
+	a, a:active {color:#6699FF;}
+	a:hover {background:#6699FF; color:#FFFFFF; text-decoration:none;}
+	a:visited {color:#66FF00;}
+	h1 {background:#66FF00; color:#FFFFFF; font-size:1em; margin:0 12px; padding:5px;}
+	hr { margin:0 12px; size:2px; }
+	#logo { margin-left:12px; margin-top:10px; display:block; background-color:#FFFFFF;}
+	#logoSmall { margin-left:0.5em; margin-top:1em; display:block; background-color:#FFFFFF;}
+	p { margin:12px; margin-bottom:0px;}
+	.form { background:#6699FF; color:#FFFFFF; padding:5px; margin:12px;}
+	.input, .textarea { padding-bottom:5px;}
+	.text { width:400px; font-size:0.9em;}
+	.button { margin:0; padding:0; font-size:1.1em;}
+</style>
+</head>
+
+<body>
+
+	<a id="logo" href="../index.php">
+		<img 	height="39" 
+				width="203" 					
+				border="0" 
+				src="../images/logo_medium_01.gif" 
+				alt="NooSpeak Home">
+	</a>
+	<br>
+	<h1>NooSpeak: Feedback Form</h1>
+	
+	<p> We love feedback. Indeed, we are building a <b>WishList</b> page where you will be able to see, vote and post any new feature or comment about NooSpeak. In the meanwhile, use the form below to send your comments/suggestions/rants to NooSpeak. If you are so kind to leave a real email address, we will even try and contact you in the next 24 hours! </p>
+	
+	<div class="form" id="mailForm">
+		<form method="post" action="sendmail.php">
+			<div id="name" class="input">
+				<input type="text" class="text" id="inputName" name="name" value="name">
+			</div>
+			<div id="email" class="input">
+				<input type="text" class="text" id="inputEmail" name="email" value="email">
+			</div>
+			<div id="subject" class="input">
+				<input type="text" class="text" id="inputSubject" name="subject" value="subject">
+			</div>
+			<div id="message" class="textarea">
+				<textarea name="message" rows=10 cols=50 style="font-family:Arial, Helvetica, sans-serif; font-size:1em; width:400px; height:200px;"></textarea>	
+			</div>
+			<div id="submit" class="button">
+				<input type="submit" name="submit" value="send it!">
+			</div>
+		</form>
+	</div>
+		
+	<center>
+		<a id="logoSmall" href="../index.php">
+			<img 	height="20" 
+					width="102" 					
+					border="0" 
+					src="../images/logo_small_01.gif" 
+					alt="NooSpeak Home">
+		</a>
+	</center>
+	
+</body>
+</html>

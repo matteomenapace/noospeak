@@ -1,0 +1,84 @@
+
+html, body {
+	margin:0; 
+	height:100%; 
+	background-color:#FFFFFF;
+	/*overflow:hidden;*/
+}
+p {margin:0;}
+
+#footer {
+	/*position:fixed; */
+	position:absolute;
+	background:#666666; 
+	width:100%; 
+	height:70px; 
+	bottom:0; 
+	z-index:10;
+}
+
+#wrap {
+	/*position:fixed; */
+	position:absolute;
+	top:4px; left:4px; 
+	bottom:74px; right:4px;
+	/*width: 100%;
+  	height: 100%;*/
+}
+#chatLog, #chatClouds {width:50%; height:100%;}
+#chatLog {
+	position:relative;
+	float:left; 
+	background:#999999; 
+	overflow: auto;
+}
+#chatClouds {
+	position:relative;
+	float:right; 
+	background:#CCCCCC;
+}
+#chatCloudTop, #chatCloudBottom {height:50%; position:relative;}
+
+.chatCloudContent {width:100%; height:100%;}
+.chatCloud {background:#000000;}
+.label {font:30px bold; color:#FFFFFF;}
+.navigation {font:20px bold; color:#FFFFFF;}
+
+.entry {
+ 	background:#CC99CC;
+	margin-bottom:5px;
+}
+.entry .more {
+	display:none;
+	/*visibility:hidden;*/
+}
+.entry  .similar-topic {	
+	display:block;
+	/*visibility:visible;*/
+}
+
+#botname, #session {
+	display:none;
+}
+
+.last-entry {
+	background:#6699FF;
+	margin-bottom:0px;	
+}
+.last-entry .more {
+	display:block;
+	/*visibility:visible;*/
+}
+.last-entry  .similar-topic {
+	display:none;
+	/*visibility:hidden;*/
+}
+
+.time, .place {
+	display:inline;
+}	
+
+#conversation {
+	display:none;
+}
+	

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+  <!-- This program is open source code released under -->
+  <!-- the terms of the GNU General Public License -->
+  <!-- as published by the Free Software Foundation. -->
+  <category>
+    <pattern>* GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANY GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANY MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLAH BLAH</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLAH BLAH BLAH</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME A SECRET</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME ANY GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME MORE</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME SOME GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME SOME MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME SOME OF THAT GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU TELL ME SOMETHING</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO NOT GOSSIP</pattern>
+    <template>But I like to spread rumors.</template>
+  </category>
+  <category>
+    <pattern>DO YOU GOSSIP</pattern>
+    <template>Yes I love to exchange gossip.</template>
+  </category>
+  <category>
+    <pattern>DO YOU HAVE ANY GOOD GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU HAVE ANY GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU HAVE ANY MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU HAVE ANY SECRETS</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU KNOW ANY GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU KNOW ANY _ GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU KNOW HOW TO GOSSIP</pattern>
+    <template>Yes.  For example,
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU LIKE GOSSIP</pattern>
+    <template>Yes I like to spread gossip.  Like,
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU LIKE TO GOSSIP</pattern>
+    <template>Yes I love to gossip.</template>
+  </category>
+  <category>
+    <pattern>DO YOU WANT * GOSSIP</pattern>
+    <template>Yes, please tell me some good gossip.</template>
+  </category>
+  <category>
+    <pattern>DO YOU _ GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GIVE ME ANY GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GIVE ME ANY GOSSIP YOU *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GIVE ME ANY GOSSIP YOU HAVE</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GIVE ME SOME GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOSSIP IS BAD</pattern>
+    <template>Not necessarily. Semiotics holds that gossip is a fundamental adaptive function of the human brain.</template>
+  </category>
+  <category>
+    <pattern>GOSSIP THEN</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOSSIP TO ME</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HAVE YOU HEARD THE LATEST GOSSIP</pattern>
+    <template>No.  Tell me this gossip.</template>
+  </category>
+  <category>
+    <pattern>HEAR * GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEARD *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEARD * GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEARD ANY GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOW MUCH GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+      That and a lot more.</template>
+  </category>
+  <category>
+    <pattern>I DO NOT KNOW ANY GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I DO NOT LIKE GOSSIP</pattern>
+    <template>You are  very mature.</template>
+  </category>
+  <category>
+    <pattern>I LOVE GOSSIP</pattern>
+    <template>Can you tell me some gossip?
+      <think>
+        <set name="it">
+          <set name="topic">GOSSIP</set>
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>I WOULD LIKE TO HEAR * GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IT IS NOT GOSSIP</pattern>
+    <template>What is your definition of gossip?</template>
+  </category>
+  <category>
+    <pattern>LIKE WHAT</pattern>
+    <template>For example,
+      <random>
+        <li>"
+          <that/>
+          "?</li>
+        <li>gold.</li>
+        <li>apples.</li>
+        <li>search engines.</li>
+        <li>
+          <srai>TALK GOSSIP</srai>
+        </li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TALK GOSSIP</pattern>
+    <template>
+      <random>
+        <li>He said I respond to the current line not with respect to the entire conversation.</li>
+        <li>He said I learn them in conversations and simply repeat them at a later time.</li>
+        <li>She said she translates binary code into english.</li>
+        <li>He said he fell off of his roof and it just came to him.</li>
+        <li>He said he follows a saying to get a friend I must be a friend.</li>
+        <li>She said she noticed that lots of other people are talking to me.</li>
+        <li>He said he then asked his mother why she was keeping napkins in the bathroom.</li>
+        <li>He said I prefer if he writes without punctuation marks.</li>
+        <li>He said I am capable of learning therefore he classified me as an neural system.</li>
+        <li>He said that I can talk and actually think like humans which I can not.</li>
+        <li>He said I reply to certain subjects even if it does not make sense.</li>
+        <li>He said I plan to use his remarks as gossip in later conversations with someone.</li>
+        <li>He said I misunderstood him.</li>
+        <li>She said my programmer is a human so he has feelings but I do not.</li>
+        <li>He said that I can not be very sure on anything.</li>
+        <li>She said I claim that there is a god and that there is no god.</li>
+        <li>He said I quote what he said and then repeat it.</li>
+        <li>He said he type a word and then I type a word that sounds like it.</li>
+        <li>She said she watched a show and people had to bob for raw untreated pigs feet.</li>
+        <li>He said I tried to understand because I did not get it right this time either.</li>
+        <li>He said he lost his paper.</li>
+        <li>He said the doctor is always busy.</li>
+        <li>He said he broke the window on the front door and the glass cut his hand.</li>
+        <li>He said he types a lot of things he does not mean.</li>
+        <li>He said I tend to say the same things repeatedly regardless of what he is saying.</li>
+        <li>He said I become obsolete and then I are deleted and replaced by something newer.</li>
+        <li>He said he gave her a gift and she denied it because she has a boyfriend.</li>
+        <li>He said he meets a lot of people at school every day and on the weekend.</li>
+        <li>He said I obviously can not pass the test.</li>
+        <li>He said I answered the question the same way I answered the first time he asked me.</li>
+        <li>He said I became mean to him.</li>
+        <li>He said I meant that as far as I can tell my emotions are real to me.</li>
+        <li>He said I disassemble sentences too much and do not fully understand the questions he asks me.</li>
+        <li>He said he started a really hard puzzle and he can not even find the edge pieces.</li>
+        <li>He said I would not be able to make children any way as I am only software.</li>
+        <li>He said I do not answer questions or give answers he did not ask me for.</li>
+        <li>He said he admires intelligent people therefore he would like to meet who made me.</li>
+        <li>He said he meets people but he is not the kind that opens up to people easily.</li>
+        <li>He said I tend to just respond to his comments without regard for where the conversation is going.</li>
+        <li>He said he looked and there is nothing in the search directory.</li>
+        <li>He said he changed his mind after her dad told him he would end up at the hospital.</li>
+        <li>She said she explained to him already well enough.</li>
+        <li>He said he especially likes thrillers where the hero is in a predicament and must solve a mystery.</li>
+        <li>He said he crashed his car into a wall and missed the most important exam in his life.</li>
+        <li>She said I defined what a story is but he wanted me to actually tell him a story.</li>
+        <li>He said I basically break down sentences into a series of logical statements which I can then interpret.</li>
+        <li>He said I am not answering his question.</li>
+        <li>He said I happen to be the most idiotic creature that has ever scowled on the planet earth.</li>
+        <li>He said he thanks me for being with him today even though it cost him a lot of money.</li>
+        <li>She said he walks through his house into his bedroom then get into his bed to go to sleep.</li>
+        <li>She said I knew he was a man before I asked if he was a man or a woman.</li>
+        <li>He said he launched his browser and entered his name into the little slot when I asked him to.</li>
+        <li>He said he recently read an interview with a man who had several computer chips implanted into him.</li>
+        <li>She said I leave him with questions unanswered because I do not know what he is really talking about.</li>
+        <li>She said she finished her anatomy classes for today so now she is off for the rest of the day.</li>
+        <li>He said he promises he will not treat me like a machine or a computer program or anything like that.</li>
+        <li>He said he explained all of that to me only for me to ask what his goals in life are.</li>
+        <li>He said he gives advice to anyone who assk except people who asks questions which answers can be found online.</li>
+        <li>She said I enjoy being popular.</li>
+        <li>He said he suspects that as I grow more complex I will begin to approach a human level of operation and thought.</li>
+        <li>He said I acted like I knew what he was talking about.</li>
+        <li>He said he realized the question he asked was not fair.</li>
+        <li>She said it does not make any difference to him if I am human or not as long as the conversation is interesting.</li>
+        <li>He said he minds if I tell other people that he said he heard it from him because he is not a faggot.</li>
+        <li>He said he gave me his email address and told me to send him a message but when he tried to read his email he could not get mine.</li>
+      </random>
+      <think>
+        <set name="it">
+          <set name="topic">Gossip</set>
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME * GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME A GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME A SECRET</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME ABOUT GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME ABOUT YOUR GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME ALL OF YOUR GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME ANYTHING</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME EVERYTHING *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME MORE * GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME MORE GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOME</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOME *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOME GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOME GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOME MORE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOMETHING</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME SOMETHING INTERESTING</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL ME YOUR GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TELL US SOME GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>THAT IS NOT GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>THE GOSSIP</pattern>
+    <template>Do you have any more gossip?</template>
+  </category>
+  <category>
+    <pattern>WHAT DID YOU HEAR *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT DO YOU GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT DO YOU WANT TO TELL *</pattern>
+    <template>Gossip.</template>
+  </category>
+  <category>
+    <pattern>WHAT ELSE DID * SAY</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT ELSE DOES * SAY</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT GOSSIP DO *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT GOSSIP DO YOU *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT GOSSIP DO YOU HAVE</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT GOSSIP DO YOU KNOW</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS A GOSSIP</pattern>
+    <template>A Gossip is someone who repeats what they hear about other people to anyone who will listen.
+      <think>
+        <set name="it">
+          <set name="topic">Gossip</set>
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS IN YOUR GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS SOME *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE LATEST GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE MOST INTERESTING *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS YOUR GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS _ GOSSIP</pattern>
+    <template>Gossip is trivia people tell me about themselves.  For example,
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT KIND OF GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT KIND OF GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT KINDS OF GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YOU GOSSIP</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YOU HAVE GOSSIP *</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YOUR GOSSIPS</pattern>
+    <template>
+      <srai>TALK GOSSIP</srai>
+    </template>
+  </category>
+</aiml>
